@@ -1,0 +1,56 @@
+--- PRIMARY
+
+CREATE TABLE t_marcela_travnickova_project_SQL_primary_final AS (
+	WITH mt_payroll AS (
+		SELECT 
+			e.YEAR,
+			czib.name AS industry_branch_name,
+			avg(cp.value) AS payment,
+			avg(e.gdp)::numeric AS hdp
+		FROM czechia_payroll cp
+		JOIN czechia_payroll_industry_branch czib
+		ON cp.industry_branch_code = czib.code
+		JOIN economies e
+		ON cp.payroll_year = e.YEAR
+		WHERE country = 'Czech Republic'
+		AND value_type_code = 5958 
+		AND value IS NOT NULL
+		GROUP BY YEAR, industry_branch_name
+		ORDER BY YEAR),
+	 mt_price AS (
+		SELECT 
+			EXTRACT (YEAR FROM cp.date_from) AS year_1,
+			cpc.name AS category_name,
+			avg(cp.value)::NUMERIC AS category_value
+		FROM czechia_price cp
+		JOIN czechia_price_category cpc
+		ON cp.category_code = cpc.code
+		GROUP BY YEAR_1, category_name, price_unit
+		ORDER BY year_1)
+    SELECT 
+        mtpa.*, 
+        mtpr.category_name,
+        mtpr.category_value
+    FROM  mt_price mtpr
+    JOIN mt_payroll mtpa
+        ON mtpa.YEAR = mtpr.YEAR_1
+	);
+
+--- SECONDARY
+CREATE TABLE t_marcela_travnickova_project_SQL_secondary_final AS (
+	WITH from_economies AS (
+		SELECT country, YEAR, gdp, population, gini
+		FROM economies
+		WHERE 
+			YEAR between 2006 AND 2018),
+	from_countries AS (
+		SELECT country AS co_country 
+		FROM countries
+		WHERE continent = 'Europe')
+	SELECT fe.*
+	FROM from_countries fc 
+	JOIN from_economies fe
+	ON fe.country = fc.co_country
+	GROUP BY country, YEAR, gdp, population, gini, co_country
+	ORDER BY country, YEAR
+);
