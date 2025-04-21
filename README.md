@@ -36,5 +36,5 @@ Projekt obsahuje následující soubory:
 - Mzdy každoročně rostly ve sledovaném období pouze ve 4 z 19 sledovaných odvětví.
 - V roce 2006 bylo možné koupit si 1 287 litrů mléka a 1 437 kilogramů chleba. V roce 2018 to bylo 1 342 litrů mléka a 1 642 kilogramů chleba.
 - Nejnižší meziroční nárůst cen byl u rajčat v roce 2007 (- 30 %).
-- Neexistuje rok, kdy by nárůst cen potravin převyšoval růst mezd o více než 10%.
+- Ve sledovaném období neexistuje rok, kdy by nárůst cen potravin převyšoval růst mezd o více než 10%.
 - Ve 4 letech (2007, 2008, 2017, 2018) byl vliv výrazného růstu HDP na růst mezd a cen potravin.
