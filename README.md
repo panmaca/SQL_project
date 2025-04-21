@@ -15,13 +15,13 @@ Pro analýzu byly použity následující datové sady:
 ## Struktura projektu
 Projekt obsahuje následující soubory:
 
-- [**create_tables.sql**](create_tables.sql) - Skript pro vytvoření primární a sekundární tabulky
-- [**question1.sql**](question1.sql) - Skript pro zodpovězení první otázky (růst nebo pokles mezd v odvětvích)
-- [**question2.sql**](question2.sql) - Skript pro zodpovězení druhé otázky (kolik je možné si koupit mléka a chleba v letech 2006 a 2018)
-- [**question3.sql**](question3.sql) - Skript pro zodpovězení třetí otázky (kategorie potravin s nejnižším meziročním nárůstem cen)
-- [**question4.sql**](question4.sql) - Skript pro zodpovězení čtvrté otázky (výrazný meziroční nárůst cen potravin oproti růstu mezd)
-- [**question5.sql**](question5.sql) - Skript pro zodpovězení páté otázky (vliv HDP na změny mezd a cen potravin)
-- [**documentation.md**](documentation.md) - Dokumentace projektu (postupy, otázky a odpovědi)
+- [create_tables.sql](./create_tables.sql) - Skript pro vytvoření primární a sekundární tabulky
+- [question1.sql](./question1.sql) - Skript pro zodpovězení první otázky (růst nebo pokles mezd v odvětvích)
+- [question2.sql](./question2.sql) - Skript pro zodpovězení druhé otázky (kolik je možné si koupit mléka a chleba v letech 2006 a 2018)
+- [question3.sql](./question3.sql) - Skript pro zodpovězení třetí otázky (kategorie potravin s nejnižším meziročním nárůstem cen)
+- [question4.sql](./question4.sql) - Skript pro zodpovězení čtvrté otázky (výrazný meziroční nárůst cen potravin oproti růstu mezd)
+- [question5.sql](./question5.sql) - Skript pro zodpovězení páté otázky (vliv HDP na změny mezd a cen potravin)
+- [documentation.md](./documentation.md) - Dokumentace projektu (postupy, otázky a odpovědi)
 
 ## Výzkumné otázky
 
